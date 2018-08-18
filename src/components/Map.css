@@ -1,0 +1,9 @@
+.map {
+	height: 90vh;
+}
+
+@media (max-height: 650px) {
+	.map {
+		height: 75vh;
+	}
+}

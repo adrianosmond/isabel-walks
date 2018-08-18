@@ -1,0 +1,27 @@
+.stats-summary {
+	font-family: Lora, serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 2.7em;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	line-height: 1.4;
+}
+
+.stats-summary--minor {
+	font-size: 1.5em;
+}
+
+@media (max-width: 959px) {
+	.stats-summary {
+		font-size: 2.1em;
+	}
+}
+
+@media (max-width: 599px) {
+	.stats-summary {
+		font-size: 1.8em;
+	}
+}

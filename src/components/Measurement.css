@@ -1,0 +1,17 @@
+.measurement__number {
+	font-weight: 700;
+	font-family: PT Sans, sans-serif;
+	font-style: normal;
+}
+
+@media (max-width: 599px) {
+	.measurement {
+		margin-top: 20px;
+	}
+	.measurement:first-child {
+		margin-top: 0;
+	}
+	.measurement__section {
+		display: block;
+	}
+}

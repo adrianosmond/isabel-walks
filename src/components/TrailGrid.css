@@ -1,0 +1,42 @@
+.trail-grid {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	padding: 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 900px) {
+	.trail-grid__tile {
+		width: calc(100% / 3);
+	}
+  .trail-grid__tile:nth-child(n+4) {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 600px) {
+	.trail-grid__tile {
+		padding: 0 20px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+	.trail-grid__tile {
+		width: 50%;
+	}
+  .trail-grid__tile:nth-child(n+3) {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 599px) {
+	.trail-grid__tile {
+		width: 100%;
+		margin-top: 20px;
+  }
+  .trail-grid__tile:first-child {
+    margin-top: 0;
+  }
+}

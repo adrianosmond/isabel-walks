@@ -1,0 +1,51 @@
+.trail-summary {
+	width: 100%;
+	table-layout: fixed;
+	margin-top: 40px;
+	font-size: 1.2em;
+	font-family: Arial, sans-serif;
+}
+
+.trail-summary__heading {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.trail-summary__row {
+	user-select: none;
+}
+
+.trail-summary__row:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+.trail-summary__row--complete {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.trail-summary__row--complete:nth-child(odd) {
+  background-color: rgba(0, 175, 0, 0.1);
+}
+
+.trail-summary__row--header {
+  background-color: transparent;
+}
+
+.trail-summary__cell {
+  padding: 10px;
+}
+
+.trail-summary__cell--complete {
+  width: 40px;
+  text-align: center;
+}
+
+@media (max-width: 599px) {
+  .trail-summary {
+    padding-left: 20px;
+  }
+  .trail-summary__cell--complete {
+    width: 20px;
+    padding: 0;
+  }
+}
