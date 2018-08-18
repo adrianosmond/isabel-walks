@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
 
+import ScrollTo from 'utils/scrollTo';
 import './Map.css';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWRyaWFub3Ntb25kIiwiYSI6ImNqa3pvcTlmYTB0b20zcHMxdGVwdXd3dDgifQ.F1bLhz5g91FlzHnt5_PYIw';
@@ -14,6 +15,8 @@ class Map extends Component {
       center: [-2.898551, 54.696059],
       zoom: 4,
     });
+
+    ScrollTo.scrollTo(this.mapContainer, 0);
 
     const { segments } = this.props;
     this.map.on('load', () => {

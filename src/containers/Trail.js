@@ -6,6 +6,7 @@ import Map from 'components/Map';
 import StatsSummary from 'components/StatsSummary';
 import TrailSummary from 'components/TrailSummary';
 
+import ScrollTo from 'utils/scrollTo';
 import { trails } from 'utils/data';
 
 class Trail extends Component {
@@ -20,6 +21,8 @@ class Trail extends Component {
     const trail = trails.find(t => t.slug === this.props.match.params.trail);
     this.setState({
       trail,
+    }, () => {
+      ScrollTo.scrollTo(this.container, 0);
     });
   }
 
@@ -27,7 +30,7 @@ class Trail extends Component {
     const { trail } = this.state;
     if (!trail) return null;
     return (
-      <div>
+      <div ref={(el) => { this.container = el; }}>
         <BackHomeLink />
         <PageHeading title={trail.name} />
         <Map segments={trail.segments.map((s, idx) => ({
