@@ -30,7 +30,10 @@ class Trail extends Component {
       <div>
         <BackHomeLink />
         <PageHeading title={trail.name} />
-        <Map />
+        <Map segments={trail.segments.map((s, idx) => ({
+          url: `${process.env.PUBLIC_URL}/geoJson/${trail.slug}-seg-${idx}.json`,
+          complete: s.complete,
+        }))} />
         <StatsSummary distance={trail.distance}
           completeDistance={trail.completeDistance}
           minor={true} />
