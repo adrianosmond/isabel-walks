@@ -39,14 +39,12 @@
         "complete": false
       },
       {
-
         "from": "Sandsend",
         "to": "Robin Hood's Bay",
         "distance": 10,
         "complete": false
       },
       {
-
         "from": "Robin Hoods Bay",
         "to": "Scarborough",
         "distance": 12,
