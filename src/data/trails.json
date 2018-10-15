@@ -1218,7 +1218,7 @@
         "from": "Putney",
         "to": "Tower Bridge",
         "distance": 10.5,
-        "complete": false
+        "complete": true
       },
       {    
         "from": "Tower Bridge",
