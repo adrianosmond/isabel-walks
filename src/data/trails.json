@@ -823,7 +823,7 @@
         "from": "Minehead",
         "to": "Porlock Weir",
         "distance": 10,
-        "complete": false
+        "complete": true
       },
       {
         "from": "Porlock Weir",
