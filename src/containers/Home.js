@@ -4,10 +4,14 @@ import TrailGrid from 'components/TrailGrid';
 
 import { totalData } from 'utils/data';
 
-const Home = () =>
+const Home = () => (
   <main>
-    <StatsSummary completeDistance={totalData.totalComplete} distance={totalData.total} />
+    <StatsSummary
+      completeDistance={totalData.totalComplete}
+      distance={totalData.total}
+    />
     <TrailGrid />
-  </main>;
+  </main>
+);
 
 export default Home;

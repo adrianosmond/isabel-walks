@@ -19,27 +19,38 @@ class Trail extends Component {
 
   componentDidMount() {
     const trail = trails.find(t => t.slug === this.props.match.params.trail);
-    this.setState({
-      trail,
-    }, () => {
-      ScrollTo.scrollTo(this.container, 0);
-    });
+    this.setState(
+      {
+        trail,
+      },
+      () => {
+        ScrollTo.scrollTo(this.container, 0);
+      },
+    );
   }
 
   render() {
     const { trail } = this.state;
     if (!trail) return null;
     return (
-      <div ref={(el) => { this.container = el; }}>
+      <div
+        ref={el => {
+          this.container = el;
+        }}
+      >
         <BackHomeLink />
         <PageHeading title={trail.name} />
-        <Map segments={trail.segments.map((s, idx) => ({
-          url: `${process.env.PUBLIC_URL}/geoJson/${trail.slug}-seg-${idx}.json`,
-          complete: s.complete,
-        }))} />
-        <StatsSummary distance={trail.distance}
+        <Map
+          segments={trail.segments.map((s, idx) => ({
+            url: `${process.env.PUBLIC_URL}/geoJson/${trail.slug}-seg-${idx}.json`,
+            complete: s.complete,
+          }))}
+        />
+        <StatsSummary
+          distance={trail.distance}
           completeDistance={trail.completeDistance}
-          minor={true} />
+          minor={true}
+        />
         <TrailSummary trail={trail} />
       </div>
     );

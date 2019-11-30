@@ -8,7 +8,7 @@ import Trail from 'containers/Trail';
 
 import './App.css';
 
-const App = () =>
+const App = () => (
   <div className="App">
     <Header />
     <Router>
@@ -18,6 +18,7 @@ const App = () =>
         <Route exact path="/map" component={AllRoutesMap} />
       </Switch>
     </Router>
-  </div>;
+  </div>
+);
 
 export default App;

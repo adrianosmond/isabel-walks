@@ -13,10 +13,25 @@ const StatsSummary = ({ distance, completeDistance, minor = false }) => {
 
   return (
     <section className={`stats-summary${minor ? ' stats-summary--minor' : ''}`}>
-      <CompletedMeasurement completeDistance={completeDistance} distance={distance} />
-      <TimeToGoMeasurement number={TIME_LEFT_DAYS} numberPer={distancePerDay} unit="day" />
-      <TimeToGoMeasurement number={TIME_LEFT_WEEKS} numberPer={distancePerWeek} unit="week" />
-      <TimeToGoMeasurement number={TIME_LEFT_YEARS} numberPer={distancePerYear} unit="year" />
+      <CompletedMeasurement
+        completeDistance={completeDistance}
+        distance={distance}
+      />
+      <TimeToGoMeasurement
+        number={TIME_LEFT_DAYS}
+        numberPer={distancePerDay}
+        unit="day"
+      />
+      <TimeToGoMeasurement
+        number={TIME_LEFT_WEEKS}
+        numberPer={distancePerWeek}
+        unit="week"
+      />
+      <TimeToGoMeasurement
+        number={TIME_LEFT_YEARS}
+        numberPer={distancePerYear}
+        unit="year"
+      />
     </section>
   );
 };
