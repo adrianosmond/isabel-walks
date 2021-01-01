@@ -1,4 +1,4 @@
-export const TIME_LEFT = 2184710400000 - (new Date()).getTime();
+export const TIME_LEFT = 2184710400000 - new Date().getTime();
 
 export const TIME_LEFT_SECS = Math.ceil(TIME_LEFT / 1000);
 

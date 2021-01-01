@@ -1,4 +1,3 @@
-import React from 'react';
 import TrailTile from 'components/TrailTile';
 import { trails } from 'utils/data';
 import './TrailGrid.css';
@@ -6,7 +5,7 @@ import './TrailGrid.css';
 const TrailGrid = () => (
   <section>
     <ul className="trail-grid">
-      {trails.map(trail => (
+      {trails.map((trail) => (
         <li key={trail.slug} className="trail-grid__tile">
           <TrailTile linkTo={`trail/${trail.slug}`} trail={trail} />
         </li>

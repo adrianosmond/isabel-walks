@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
 
 import ScrollTo from 'utils/scrollTo';
@@ -37,8 +37,8 @@ class Map extends Component {
       Promise.all(
         segments.map((s, idx) =>
           fetch(s.url)
-            .then(r => r.json())
-            .then(data => {
+            .then((r) => r.json())
+            .then((data) => {
               this.map.addLayer({
                 id: `route-${idx}`,
                 type: 'line',
@@ -61,8 +61,8 @@ class Map extends Component {
             }),
         ),
       )
-        .then(features => {
-          features.forEach(seg =>
+        .then((features) => {
+          features.forEach((seg) =>
             seg.features[0].geometry.coordinates.forEach(
               bounds.extend.bind(bounds),
             ),
@@ -81,7 +81,7 @@ class Map extends Component {
       <section
         className="map"
         id="map"
-        ref={el => {
+        ref={(el) => {
           this.mapContainer = el;
         }}
       ></section>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Measurement.css';
 
 const Measurement = ({ sections }) => (

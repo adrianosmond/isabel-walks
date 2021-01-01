@@ -21,16 +21,16 @@ const names = {
 const url =
   'https://docs.google.com/spreadsheets/d/1dWCmkRkW6OsHkaDRLPDpYgt9Ov6Km1_6ZRu9Fw2vnSE/edit';
 
-const showInfo = data => {
-  const trails = [...new Set(data.map(x => x.trailid))];
+const showInfo = (data) => {
+  const trails = [...new Set(data.map((x) => x.trailid))];
   const trailData = trails.reduce(
     (obj, id) => ({
       ...obj,
       [id]: {
         name: names[id],
         segments: data
-          .filter(x => x.trailid === id)
-          .map(segment => ({
+          .filter((x) => x.trailid === id)
+          .map((segment) => ({
             from: segment.from,
             to: segment.to,
             distance: parseFloat(segment.distance),

@@ -1,7 +1,4 @@
-
-const easing = t => (t < 0.5
-  ? 2 * t * t
-  : (-1 + (4 - (2 * t))) * t);
+const easing = (t) => (t < 0.5 ? 2 * t * t : (-1 + (4 - 2 * t)) * t);
 
 class ScrollTo {
   constructor() {
@@ -15,7 +12,7 @@ class ScrollTo {
 
   scrollTo(el, offset = 50) {
     this.currentValue = window.pageYOffset;
-    this.scroll((el.getBoundingClientRect().top + this.currentValue) - offset);
+    this.scroll(el.getBoundingClientRect().top + this.currentValue - offset);
   }
 
   updateScrollPos() {

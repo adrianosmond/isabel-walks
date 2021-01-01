@@ -1,4 +1,3 @@
-import React from 'react';
 import TimeToGoMeasurement from 'components/TimeToGoMeasurement';
 import CompletedMeasurement from 'components/CompletedMeasurement';
 import { TIME_LEFT_DAYS, TIME_LEFT_WEEKS, TIME_LEFT_YEARS } from 'utils/time';

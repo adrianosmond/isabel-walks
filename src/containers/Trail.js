@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import BackHomeLink from 'components/BackHomeLink';
 import PageHeading from 'components/PageHeading';
@@ -18,7 +18,7 @@ class Trail extends Component {
   }
 
   componentDidMount() {
-    const trail = trails.find(t => t.slug === this.props.match.params.trail);
+    const trail = trails.find((t) => t.slug === this.props.match.params.trail);
     this.setState(
       {
         trail,
@@ -34,7 +34,7 @@ class Trail extends Component {
     if (!trail) return null;
     return (
       <div
-        ref={el => {
+        ref={(el) => {
           this.container = el;
         }}
       >

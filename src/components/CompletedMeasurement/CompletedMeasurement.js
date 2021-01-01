@@ -1,4 +1,3 @@
-import React from 'react';
 import Measurement from 'components/Measurement';
 import { formatNumber } from 'utils/utils';
 

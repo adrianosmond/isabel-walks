@@ -1,4 +1,3 @@
-import React from 'react';
 import StatsSummary from 'components/StatsSummary';
 import TrailGrid from 'components/TrailGrid';
 
